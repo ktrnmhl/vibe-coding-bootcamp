@@ -44,6 +44,32 @@ body {
   padding: 0.1em 0;
 }
 
+/* ── Blinkender Cursor für den Tipp-Effekt ── */
+
+@keyframes blink-cursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 0.05em;
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-cursor {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* ── Akzentlinie ── */
 
 .accent-bar {
